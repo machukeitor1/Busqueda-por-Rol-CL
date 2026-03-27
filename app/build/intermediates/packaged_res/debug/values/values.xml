@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#E85D04</color>
+    <color name="colorBackground">#F0F4F8</color>
+    <color name="colorPrimary">#1A3A5C</color>
+    <color name="white">#FFFFFF</color>
+    <string name="app_name">SII Rol</string>
+    <style name="Theme.SIIRol" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+    </style>
+    <style name="Theme.SIIRol.Splash" parent="Theme.SIIRol">
+        <item name="android:windowBackground">#1A3A5C</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:statusBarColor">#1A3A5C</item>
+        <item name="android:navigationBarColor">#1A3A5C</item>
+    </style>
+</resources>

@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-merged_res-31:\\drawable_ic_logo.png.flat",
+        "source": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-main-33:\\drawable\\ic_logo.png"
+    },
+    {
+        "merged": "cl.machukeitor.siirol.app-merged_res-31:/layout_activity_main.xml.flat",
+        "source": "cl.machukeitor.siirol.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-merged_res-31:\\drawable_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-main-33:\\drawable\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-merged_res-31:\\layout_activity_tgr.xml.flat",
+        "source": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-main-33:\\layout\\activity_tgr.xml"
+    },
+    {
+        "merged": "cl.machukeitor.siirol.app-merged_res-31:/layout_item_resultado.xml.flat",
+        "source": "cl.machukeitor.siirol.app-main-33:/layout/item_resultado.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-merged_res-31:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-main-33:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-merged_res-31:\\drawable_bg_spinner.xml.flat",
+        "source": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-main-33:\\drawable\\bg_spinner.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-merged_res-31:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-main-33:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-merged_res-31:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-main-33:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-merged_res-31:\\drawable_bg_edittext.xml.flat",
+        "source": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-main-33:\\drawable\\bg_edittext.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-merged_res-31:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-main-33:\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-merged_res-31:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-main-33:\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-merged_res-31:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-main-33:\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-merged_res-31:\\xml_provider_paths.xml.flat",
+        "source": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-main-33:\\xml\\provider_paths.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-merged_res-31:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Cristian Machuca\\.gradle\\daemon\\8.2\\cl.machukeitor.siirol.app-main-33:\\mipmap-xxxhdpi\\ic_launcher.png"
+    }
+]

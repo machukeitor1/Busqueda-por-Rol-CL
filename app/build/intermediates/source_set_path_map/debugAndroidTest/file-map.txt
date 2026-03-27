@@ -1,0 +1,4 @@
+cl.machukeitor.siirol.test.app-androidTest-0 C:\Users\Cristian Machuca\Downloads\SIIRol\app\build\generated\res\resValues\androidTest\debug
+cl.machukeitor.siirol.test.app-mergeDebugAndroidTestResources-1 C:\Users\Cristian Machuca\Downloads\SIIRol\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+cl.machukeitor.siirol.test.app-mergeDebugAndroidTestResources-2 C:\Users\Cristian Machuca\Downloads\SIIRol\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+cl.machukeitor.siirol.test.app-merged_res-3 C:\Users\Cristian Machuca\Downloads\SIIRol\app\build\intermediates\merged_res\debugAndroidTest

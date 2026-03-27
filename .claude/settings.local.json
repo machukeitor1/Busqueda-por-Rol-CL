@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www4.sii.cl)",
+      "Bash(curl -s -o /tmp/sii_response.txt -w \"%{http_code}\" -X POST 'https://www4.sii.cl/mapasui/services/data/mapasFacadeService/getPrediosDireccion' -H 'Content-Type: application/json' -H 'Accept: application/json, text/plain, */*' -H 'Origin: https://www4.sii.cl' -H 'Referer: https://www4.sii.cl/mapasui/internet/' -H 'X-Requested-With: XMLHttpRequest' -H 'User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36' -d '{\"\"metaData\"\":{\"\"namespace\"\":\"\"cl.sii.sdi.lob.bbrr.mapas.data.api.interfaces.MapasFacadeService/getPrediosDireccion\"\",\"\"conversationId\"\":\"\"UNAUTHENTICATED-CALL\"\",\"\"transactionId\"\":\"\"abc-123\"\",\"\"info\"\":null,\"\"errors\"\":null,\"\"page\"\":null},\"\"data\"\":{\"\"rolDireccion\"\":{\"\"comuna\"\":\"\"8101\"\",\"\"nombreComuna\"\":\"\"CHILLÁN\"\",\"\"calle\"\":\"\"blanco encalada\"\",\"\"numeroCalleStr\"\":\"\"262\"\",\"\"detalle\"\":0},\"\"servicios\"\":[]}}')",
+      "WebFetch(domain:www.tgr.cl)",
+      "Bash(curl -s --insecure -L -w \"\\\\nHTTP:%{http_code}\\\\nURL_FINAL:%{url_effective}\" \"https://www.tgr.cl/tramites-tgr/certificado-de-deuda-de-contribuciones/\" -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" -H \"Accept: text/html\")",
+      "Bash(curl -s --insecure -L \"https://www.tgr.cl/tramites-tgr/certificado-de-deuda-de-contribuciones/\" -H \"User-Agent: Mozilla/5.0\")",
+      "Bash(curl -s --insecure \"https://portalpagos.tgr.cl/ppInternet/contribuciones/certificado\" -H \"User-Agent: Mozilla/5.0\")",
+      "Bash(grep -v \"^$\\\\|^  *$\")"
+    ]
+  }
+}

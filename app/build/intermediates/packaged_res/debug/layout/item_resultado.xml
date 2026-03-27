@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#F8FAFD"
+    android:padding="14dp">
+
+    <TextView
+        android:id="@+id/tvDireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="#1A3A5C"
+        android:layout_marginBottom="2dp"/>
+
+    <TextView
+        android:id="@+id/tvRol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="#333333"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="2dp"/>
+
+    <TextView
+        android:id="@+id/tvDestino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btnItemCertificado"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="📄 Obtener Certificado TGR"
+        android:textSize="12sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#1A3A5C"
+        android:stateListAnimator="@null"/>
+
+    <!-- Separador -->
+    <View
+        android:id="@+id/separador"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E8F0"
+        android:layout_marginTop="14dp"/>
+
+</LinearLayout>

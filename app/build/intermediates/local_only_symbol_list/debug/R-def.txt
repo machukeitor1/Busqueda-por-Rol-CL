@@ -1,0 +1,37 @@
+R_DEF: Internal format may change without notice
+local
+color colorAccent
+color colorBackground
+color colorPrimary
+color white
+drawable bg_edittext
+drawable bg_spinner
+drawable ic_launcher
+drawable ic_logo
+id btnAbrirPdf
+id btnBuscar
+id btnItemCertificado
+id btnVolver
+id cardResultado
+id containerResultados
+id etCalle
+id etNumero
+id progressBar
+id separador
+id spinnerComuna
+id tgrProgressBar
+id tvDestino
+id tvDireccion
+id tvEstado
+id tvResultado
+id tvRol
+id tvTgrInfo
+layout activity_main
+layout activity_splash
+layout activity_tgr
+layout item_resultado
+mipmap ic_launcher
+string app_name
+style Theme.SIIRol
+style Theme.SIIRol.Splash
+xml provider_paths
