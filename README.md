@@ -27,16 +27,6 @@
 - **Networking**: Peticiones HTTP Nativas (`HttpURLConnection` + Session Cookies Management)
 - **File System**: `MediaStore` API (Android 10+) y `FileProvider` (Soporte Legacy)
 
-## 📸 Capturas de Pantalla
-
-*(Añade aquí las capturas de pantalla de la aplicación funcionando. Por ejemplo: una imagen de la consulta, una del resultado y una del PDF abierto)*
-<p align="center">
-  <img src="https://via.placeholder.com/250x500.png?text=Pantalla+Buscador" width="200"/>
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://via.placeholder.com/250x500.png?text=Resultados+y+ROL" width="200"/>
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://via.placeholder.com/250x500.png?text=Descarga+TGR" width="200"/>
-</p>
 
 ## ⚙️ Cómo ejecutar el proyecto en local
 
@@ -44,7 +34,7 @@ Sigue estos pasos para compilar y ejecutar el proyecto en tu máquina:
 
 1. Clona el repositorio:
   ```bash
-  git clone https://github.com/TU_USUARIO/SIIRol-Android.git
+  git clone https://github.com/machukeitor1/Busqueda-por-Rol-CL.git
   ```
 2. Inicia **Android Studio** (se recomienda la versión Hedgehog o superior).
 3. Selecciona `Open an Existing Project` y navega hasta la carpeta descargada.
