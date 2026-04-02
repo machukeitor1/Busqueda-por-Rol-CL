@@ -30,17 +30,48 @@
         android:layout_height="wrap_content"
         android:textSize="12sp"
         android:textColor="#666666"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="4dp"/>
 
-    <Button
-        android:id="@+id/btnItemCertificado"
+    <TextView
+        android:id="@+id/tvAvaluo"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="📄 Obtener Certificado TGR"
+        android:layout_height="wrap_content"
         android:textSize="12sp"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#1A3A5C"
-        android:stateListAnimator="@null"/>
+        android:textColor="#1A6B3C"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="0dp">
+
+        <Button
+            android:id="@+id/btnItemCertificado"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:text="📄 TGR"
+            android:textSize="11sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1A3A5C"
+            android:stateListAnimator="@null"/>
+
+        <Button
+            android:id="@+id/btnItemCertificadoSii"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:text="🏠 SII"
+            android:textSize="11sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1A6B3C"
+            android:stateListAnimator="@null"/>
+    </LinearLayout>
 
     <!-- Separador -->
     <View

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F4F8">
+
+    <!-- Header azul -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="#1A3A5C">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Certificado de Antecedentes SII"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/tvSiiRolInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#B0C8E8"
+                android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:id="@+id/tvSiiInstruccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inicia sesión con tu Clave Tributaria"
+                android:textSize="11sp"
+                android:textColor="#E0EAF5"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- WebView con overlay de carga para evitar parpadeo entre redirects -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <WebView
+            android:id="@+id/siiWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"/>
+
+        <LinearLayout
+            android:id="@+id/siiLoadingOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="#FFFFFF"
+            android:visibility="visible">
+
+            <ProgressBar
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:indeterminateTint="#1A3A5C"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cargando..."
+                android:textSize="13sp"
+                android:textColor="#1A3A5C"
+                android:layout_marginTop="12dp"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- Panel de estado: aparece solo cuando se captura el PDF -->
+    <ScrollView
+        android:id="@+id/scrollDescarga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ProgressBar
+                android:id="@+id/siiProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tvSiiEstado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="#333333"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone"/>
+
+            <!-- Oculto: ya no se usa para descarga manual -->
+            <Button
+                android:id="@+id/btnDescargarSii"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                android:text="Descargar"/>
+
+            <Button
+                android:id="@+id/btnCompartirSii"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="↗  COMPARTIR PDF"
+                android:textSize="13sp"
+                android:textColor="#E85D04"
+                android:backgroundTint="#FFF0E8"
+                android:stateListAnimator="@null"
+                android:visibility="gone"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnReintentarSii"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="↺  REINTENTAR"
+                android:textSize="13sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#E85D04"
+                android:stateListAnimator="@null"
+                android:visibility="gone"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnVolverSii"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="← Volver"
+                android:textSize="13sp"
+                android:textColor="#1A3A5C"
+                android:backgroundTint="#E8EEF5"
+                android:stateListAnimator="@null"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

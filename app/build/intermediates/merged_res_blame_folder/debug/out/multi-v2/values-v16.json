@@ -4,7 +4,7 @@
             "outputFile": "cl.machukeitor.siirol.app-mergeDebugResources-29:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Cristian Machuca\\.gradle\\caches\\transforms-3\\97e765d7646eda9d89caa6262cf470cb\\transformed\\core-1.12.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Cristian Machuca\\.gradle\\caches\\transforms-4\\c43ab52524a4acfbb564e31eb6d2b32c\\transformed\\core-1.12.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Cristian Machuca\\.gradle\\caches\\transforms-3\\2303021cb7f3f78c4bc1b8231e5ae854\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Cristian Machuca\\.gradle\\caches\\transforms-4\\09440420421c82db8f73f53491e01bd6\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

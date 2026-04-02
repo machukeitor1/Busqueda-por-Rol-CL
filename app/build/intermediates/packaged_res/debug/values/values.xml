@@ -4,7 +4,7 @@
     <color name="colorBackground">#F0F4F8</color>
     <color name="colorPrimary">#1A3A5C</color>
     <color name="white">#FFFFFF</color>
-    <string name="app_name">SII Rol</string>
+    <string name="app_name">Búsqueda por Rol</string>
     <style name="Theme.SIIRol" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>

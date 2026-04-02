@@ -1,4 +1,4 @@
-<h1 align="center">SII Rol Consulta & TGR Descargas — Android App</h1>
+<h1 align="center">Busqueda por Rol — Android App by Machukeitor</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white"/>
@@ -27,16 +27,6 @@
 - **Networking**: Peticiones HTTP Nativas (`HttpURLConnection` + Session Cookies Management)
 - **File System**: `MediaStore` API (Android 10+) y `FileProvider` (Soporte Legacy)
 
-## 📸 Capturas de Pantalla
-
-*(Añade aquí las capturas de pantalla de la aplicación funcionando. Por ejemplo: una imagen de la consulta, una del resultado y una del PDF abierto)*
-<p align="center">
-  <img src="https://via.placeholder.com/250x500.png?text=Pantalla+Buscador" width="200"/>
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://via.placeholder.com/250x500.png?text=Resultados+y+ROL" width="200"/>
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://via.placeholder.com/250x500.png?text=Descarga+TGR" width="200"/>
-</p>
 
 ## ⚙️ Cómo ejecutar el proyecto en local
 
