@@ -152,6 +152,27 @@
                 android:orientation="vertical"
                 android:padding="20dp">
 
+                <!-- Label Región -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🗺 REGIÓN"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A3A5C"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="6dp"/>
+
+                <!-- Spinner Región -->
+                <Spinner
+                    android:id="@+id/spinnerRegion"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_spinner"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:layout_marginBottom="18dp"/>
+
                 <!-- Label Comuna -->
                 <TextView
                     android:layout_width="wrap_content"
@@ -298,7 +319,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Creado por Cristian Machuca · Versión App 1.3"
+            android:text="Creado por Cristian Machuca · Versión App 1.4"
             android:textSize="11sp"
             android:textColor="#8A9BB0"
             android:gravity="center"
