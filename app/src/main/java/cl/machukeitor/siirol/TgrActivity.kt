@@ -14,6 +14,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
+import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.*
 import java.io.File
 import java.net.HttpURLConnection
@@ -72,13 +73,13 @@ class TgrActivity : AppCompatActivity() {
         btnReintentar.visibility = View.GONE
         tvEstado.text            = "⏳ Conectando con TGR..."
 
-        CoroutineScope(Dispatchers.IO).launch {
+        lifecycleScope.launch(Dispatchers.IO) {
             try {
                 val cookies = obtenerSesion()
                 withContext(Dispatchers.Main) { tvEstado.text = "⏳ Generando certificado PDF..." }
 
                 val html = obtenerCertificadoHtml(cookies)
-                val b64  = extraerBase64Pdf(html)
+                val b64  = SiiUtils.extraerBase64Pdf(html)
                     ?: throw Exception("El servidor no devolvió el PDF.\nVerifica que el ROL exista en TGR.")
 
                 val bytes   = android.util.Base64.decode(b64, android.util.Base64.DEFAULT)
@@ -103,7 +104,7 @@ class TgrActivity : AppCompatActivity() {
     }
 
     private fun obtenerSesion(): String {
-        val body  = "region=$region&comuna=$comuna&rol=$rol&subRol=$subRol&g-recaptcha-response="
+        val body  = SiiUtils.construirFormTgr(region, comuna, rol, subRol)
         val bytes = body.toByteArray(Charsets.UTF_8)
         val conn  = (URL(BEGIN_URL).openConnection() as HttpURLConnection).apply {
             requestMethod = "POST"
@@ -123,7 +124,7 @@ class TgrActivity : AppCompatActivity() {
     }
 
     private fun obtenerCertificadoHtml(cookies: String): String {
-        val body  = "region=$region&comuna=$comuna&rol=$rol&subRol=$subRol&g-recaptcha-response="
+        val body  = SiiUtils.construirFormTgr(region, comuna, rol, subRol)
         val bytes = body.toByteArray(Charsets.UTF_8)
         val conn  = (URL(CERT_URL).openConnection() as HttpURLConnection).apply {
             requestMethod = "POST"
@@ -141,15 +142,6 @@ class TgrActivity : AppCompatActivity() {
         conn.disconnect()
         if (code != 200) throw Exception("Error HTTP $code al obtener certificado")
         return html
-    }
-
-    private fun extraerBase64Pdf(html: String): String? {
-        val marker = "data:application/pdf;base64,"
-        val start  = html.indexOf(marker)
-        if (start == -1) return null
-        val raw = html.substring(start + marker.length)
-        return raw.takeWhile { c -> c.isLetterOrDigit() || c == '+' || c == '/' || c == '=' }
-            .ifEmpty { null }
     }
 
     private fun guardarEnDescargas(bytes: ByteArray, nombre: String): File {

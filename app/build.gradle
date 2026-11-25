@@ -11,22 +11,37 @@ android {
         applicationId "cl.machukeitor.siirol"
         minSdk 24
         targetSdk 34
-        versionCode 3
-        versionName "1.3"
+        versionCode 4
+        versionName "1.4"
     }
 
+    // Claves de firma fuera del repo: keystore.properties (ignorado por git)
+    // o variables de entorno SIIROL_STORE_FILE / SIIROL_STORE_PASSWORD / SIIROL_KEY_ALIAS / SIIROL_KEY_PASSWORD.
+    // Ver keystore.properties.example. Sin claves, el release se genera sin firmar.
+    def keystorePropsFile = rootProject.file("keystore.properties")
+    def keystoreProps = new Properties()
+    if (keystorePropsFile.exists()) {
+        keystorePropsFile.withInputStream { keystoreProps.load(it) }
+    }
+    def firma = { String prop, String env -> keystoreProps.getProperty(prop) ?: System.getenv(env) }
+    def storeFilePath = firma("storeFile", "SIIROL_STORE_FILE")
+
     signingConfigs {
-        release {
-            storeFile     file("../siirol.jks")
-            storePassword "TU_PASSWORD"
-            keyAlias      "siirol"
-            keyPassword   "TU_PASSWORD"
+        if (storeFilePath) {
+            release {
+                storeFile     rootProject.file(storeFilePath)
+                storePassword firma("storePassword", "SIIROL_STORE_PASSWORD")
+                keyAlias      firma("keyAlias", "SIIROL_KEY_ALIAS") ?: "siirol"
+                keyPassword   firma("keyPassword", "SIIROL_KEY_PASSWORD")
+            }
         }
     }
 
     buildTypes {
         release {
-            signingConfig    signingConfigs.release
+            if (storeFilePath) {
+                signingConfig signingConfigs.release
+            }
             minifyEnabled    true
             shrinkResources  true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -49,5 +64,10 @@ dependencies {
     implementation 'com.google.android.material:material:1.11.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.2'
     // OkHttp ya no se necesita
+
+    testImplementation 'junit:junit:4.13.2'
+    // org.json real: el android.jar solo trae stubs que lanzan excepción en tests JVM
+    testImplementation 'org.json:json:20231013'
 }
