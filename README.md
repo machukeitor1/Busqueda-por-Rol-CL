@@ -34,13 +34,26 @@ Sigue estos pasos para compilar y ejecutar el proyecto en tu máquina:
 
 1. Clona el repositorio:
   ```bash
-  git clone https://github.com/TU_USUARIO/SIIRol-Android.git
+  git clone https://github.com/machukeitor1/Busqueda-por-Rol-CL.git
   ```
 2. Inicia **Android Studio** (se recomienda la versión Hedgehog o superior).
 3. Selecciona `Open an Existing Project` y navega hasta la carpeta descargada.
 4. Espera a que la **sincronización de Gradle** termine con éxito.
 5. Conecta un dispositivo físico por USB o inicia el emulador integrado.
 6. Pulsa sobre el botón verde ▶ **Run `app`** en la barra superior.
+
+### 🧪 Tests unitarios
+
+La lógica pura (formato de pesos, roles, historial, JSON del SII, listado de comunas) está cubierta por tests JUnit en `app/src/test`:
+
+```bash
+./gradlew test        # Linux / macOS
+gradlew.bat test      # Windows
+```
+
+### 🔐 Firma de release
+
+Copia `keystore.properties.example` como `keystore.properties` (ignorado por git), completa tus claves y deja el `.jks` en la raíz. También se pueden usar las variables de entorno `SIIROL_STORE_FILE`, `SIIROL_STORE_PASSWORD`, `SIIROL_KEY_ALIAS` y `SIIROL_KEY_PASSWORD`. Sin claves, `assembleRelease` genera un APK sin firmar.
 
 > **💡 Nota Técnica:**
 > La consulta del SII emplea el endpoint público `getPrediosDireccion` que retorna datos catastrales generales. Si tu búsqueda no devuelve valor, prueba utilizando la calle sin tildes y todo en minúsculas. 

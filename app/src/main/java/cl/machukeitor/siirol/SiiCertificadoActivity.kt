@@ -21,6 +21,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
+import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.*
 import org.json.JSONArray
 import org.json.JSONObject
@@ -177,7 +178,7 @@ class SiiCertificadoActivity : AppCompatActivity() {
             btnCompartir.visibility  = View.GONE
             btnReintentar.visibility = View.GONE
         }
-        CoroutineScope(Dispatchers.IO).launch {
+        lifecycleScope.launch(Dispatchers.IO) {
             try {
                 val eac = obtenerUltimoEac(rut, cookies)
                 withContext(Dispatchers.Main) { tvEstado.text = "⏳ Generando certificado..." }
