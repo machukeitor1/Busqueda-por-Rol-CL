@@ -12,11 +12,17 @@ captures/
 *.aab
 *.keystore
 *.jks
+keystore.properties
 
 # Gradle
-gradle-wrapper.jar
 .gradle
 
 # Generated
 gen/
 out/
+
+# Logs de build
+*.log
+build_out.txt
+gradle_out.txt
+gradle_err.txt
