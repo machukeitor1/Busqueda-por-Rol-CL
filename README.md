@@ -1,4 +1,4 @@
-<h1 align="center">Busqueda por Rol — Android App by Machukeitor</h1>
+<h1 align="center">Busqueda por Rol — Android App by Cristian Machuca</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white"/>
