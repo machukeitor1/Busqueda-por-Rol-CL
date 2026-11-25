@@ -26,3 +26,6 @@ out/
 build_out.txt
 gradle_out.txt
 gradle_err.txt
+
+# Configuración local de Claude Code
+.claude/settings.local.json
